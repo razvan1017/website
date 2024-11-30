@@ -1,0 +1,155 @@
+<html>
+<head>
+    <title>Profil Personal - Moga Razvan-Lucian</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #4a4a8a;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        div {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #e3e3e3;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #4a4a8a;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            opacity: 0.9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4a4a8a;
+            color: white;
+        }
+
+        td {
+            background-color: #ffffff;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            ul li {
+                padding: 5px;
+                color: #333;
+            }
+
+        a {
+            color: #4b79a1;
+            text-decoration: none;
+        }
+
+        a:hover {
+                text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Profil Personal</h1>
+    </header>
+    <img id="poza" src="poza_profil.png">
+    <div>
+        <h2>Date de identificare</h2>
+        <p><b>Nume:</b> <span id="nume">Moga Razvan – Lucian</span></p>
+        <p><b>Telefon:</b> <span id="telefon">0770687747</span></p>
+        <p><b>Email:</b> <span id="email">moga.gr.razvan@student.utcluj.ro</span></p>
+    </div>
+
+    <div>
+        <h2>Citat reprezentativ</h2>
+        <p id="citat">“Time is an illusion, but your choices are real. Use them wisely.”</p>
+    </div>
+
+    <div>
+        <h2>Discipline de studiu si anul in care se fac:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Anul de studiu</th>
+                    <th>Link catre descriere</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Programarea calculatoarelor si limbaje de programare</td>
+                    <td>Anul I</td>
+                    <td><a href="https://etti.utcluj.ro/planuri-de-invatamant.html" target="_blank">Fisa disciplinei</a></td>
+                </tr>
+                <tr>
+                    <td>Analiza matematica</td>
+                    <td>Anul I</td>
+                    <td><a href="https://etti.utcluj.ro/planuri-de-invatamant.html" target="_blank">Fisa disciplinei</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Hobby-uri si alte activitati:</h2>
+        <ul id="hobby-uri">
+            <li>Gaming</li>
+            <li>Programare</li>
+            <li>Filme, seriale, anime-uri</li>
+        </ul>
+    </div>
+
+    <button onclick="AltaViata()">Alta viata</button>
+
+    <script>
+        function AltaViata() {
+            document.body.style.backgroundColor = "#283149";
+
+            document.getElementById("nume").textContent = "Pop Ionut";
+            document.getElementById("telefon").textContent = "0754257895";
+            document.getElementById("email").textContent = "pop.ionut05@gmail.com";
+            document.getElementById("citat").textContent = "Ai n-ai mingea dai la poarta.";
+
+            document.getElementById("hobby-uri").innerHTML = `
+                <li>Voluntariat in IT</li>
+                <li>Publicatii academice</li>
+                <li>Proiecte open-source</li>
+            `;
+
+            document.getElementById("poza").src = "https://img.a.transfermarkt.technology/portrait/big/944715-1694069823.png?lm=1";
+        }
+    </script>
+</body>
+</html>
